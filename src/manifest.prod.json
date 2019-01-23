@@ -1,0 +1,21 @@
+{
+  "manifest_version": 2,
+  "name": "vce",
+  "version": "0.0.1",
+  "description": "",
+  "author": "pocketberserker",
+  "browser_action": {
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["http://*/*", "https://*/*"],
+      "js": ["js/content.bundle.js"],
+      "run_at": "document_end"
+    }
+  ],
+  "permissions": [
+    "activeTab",
+    "storage"
+  ]
+}
